@@ -1,27 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Carcacha - Portafolio</title>
+    <title>PesoBluMVVM - Portafolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a mi portafolio</h1>
-        <p>Estos son algunos de mis proyectos destacados:</p>
+        <div class="language-switch">
+            <button onclick="switchLanguage('es')">ES</button>
+            <button onclick="switchLanguage('pt')">PT</button>
+        </div>
+        <h1>Bienvenido a PesoBluMVVM</h1>
+        <p>App de conversión de monedas y selección del editor de turismo en Argentina.</p>
     </header>
     <main>
-        <section>
-            <h2>Proyectos</h2>
+        <section id="about">
+            <h2>Acerca de la App</h2>
+            <p>PesoBluMVVM es una app desarrollada para iOS utilizando UIKit y el patrón MVVM. Ofrece conversión de monedas y recomendaciones turísticas de las ciudades más destacadas de Argentina.</p>
+        </section>
+
+        <section id="features">
+            <h2>Herramientas Usadas</h2>
             <ul>
-                <li><a href="https://github.com/danielcarc/PesoBlueMVVM">PesoBlu</a>: Conversor de monedas al peso argentino.</li>
+                <li>UIKit con vistas programáticas (ViewCode)</li>
+                <li>Patrón MVVM</li>
+                <li>JSON Request</li>
+                <li>Patrón Delegate</li>
+                <li>Manejo de Github</li>
+                <li>Autenticación con Google Firebase, Google Analytics y Crashlytics</li>
             </ul>
         </section>
+
+        <section id="development-status">
+            <h2>Estado del Desarrollo</h2>
+            <p>La app está en desarrollo y pronto estará disponible en la App Store. ¡Sigue nuestras actualizaciones para más información!</p>
+        </section>
+
+        <section id="cities">
+            <h2>Ciudades Destacadas</h2>
+            <div class="city">
+                <h3>Buenos Aires</h3>
+                <img src="buenosaires.jpg" alt="Vista de Buenos Aires">
+                <p>Explora los mejores paseos, cafeterías, pizzerías, restaurantes y bares de la ciudad.</p>
+            </div>
+            <div class="city">
+                <h3>Bariloche</h3>
+                <img src="bariloche.jpg" alt="Vista de Bariloche">
+                <p>Descubre el encanto de la Patagonia con sus paseos y restaurantes únicos.</p>
+            </div>
+            <div class="city">
+                <h3>Córdoba</h3>
+                <img src="cordoba.jpg" alt="Vista de Córdoba">
+                <p>Recorre las sierras y disfruta de la gastronomía local.</p>
+            </div>
+            <div class="city">
+                <h3>Ushuaia</h3>
+                <img src="ushuaia.jpg" alt="Vista de Ushuaia">
+                <p>Vive una experiencia inolvidable en el fin del mundo.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos:</p>
+            <ul>
+                <li>Email personal: <a href="mailto:daniel.carcacha@gmail.com">daniel.carcacha@gmail.com</a></li>
+                <li>Email del proyecto: <a href="mailto:pesoblu.atencion@gmail.com">pesoblu.atencion@gmail.com</a></li>
+                <li>Teléfono (Argentina): +54 11 3607 6700</li>
+                <li>Teléfono (Brasil): +55 11 99453 3043</li>
+            </ul>
+            <div class="social-links">
+                <a href="https://github.com/danielcarc/pesobluemvvm" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/danielcarcacha/" target="_blank">LinkedIn</a>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>© 2025 Daniel Carcacha</p>
+        <p>© 2025 Daniel Carcacha. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            alert(`Cambiando a idioma: ${lang}`); // Placeholder para cambio de idioma
+        }
+    </script>
 </body>
 </html>
-
