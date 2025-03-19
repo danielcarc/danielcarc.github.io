@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PesoBluMVVM - Portafolio</title>
+    <meta name="description" content="PesoBluMVVM: App iOS de conversión de monedas y turismo en Argentina por Daniel Carcacha">
+    <meta name="keywords" content="iOS, MVVM, UIKit, Combine, turismo Argentina, desarrollo móvil">
+    <meta name="author" content="Daniel Carcacha">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
     <header>
         <div class="language-switch">
             <button onclick="switchLanguage('es')">ES</button>
@@ -18,7 +25,13 @@
     <main>
         <section id="about">
             <h2>Acerca de la App</h2>
-            <p>PesoBluMVVM es una app desarrollada para iOS utilizando UIKit y el patrón MVVM. Ofrece conversión de monedas y recomendaciones turísticas de las ciudades más destacadas de Argentina.</p>
+            <p>PesoBluMVVM es una app desarrollada para iOS utilizando UIKit y el patrón MVVM. Ofrece conversión de monedas en tiempo real con Combine y recomendaciones turísticas de las ciudades más destacadas de Argentina.</p>
+            <video autoplay loop muted playsinline>
+                <source src="videos/video_Combine.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+            <p class="video-caption">Demostración de la conversión de monedas en tiempo real usando Combine para una experiencia fluida y reactiva.</p>
+            <a href="https://github.com/danielcarc/PesoBlueMVVM" target="_blank" class="github-button">Ver en GitHub</a>
         </section>
 
         <section id="features">
@@ -26,6 +39,7 @@
             <ul>
                 <li>UIKit con vistas programáticas (ViewCode)</li>
                 <li>Patrón MVVM</li>
+                <li>Combine para manejo de datos reactivos</li>
                 <li>JSON Request</li>
                 <li>Patrón Delegate</li>
                 <li>Manejo de Github</li>
@@ -35,11 +49,16 @@
 
         <section id="development-status">
             <h2>Estado del Desarrollo</h2>
-            <p>La app está en desarrollo y pronto estará disponible en la App Store. ¡Sigue nuestras actualizaciones para más información!</p>
+            <p>La app está en desarrollo activo y pronto estará disponible en la App Store. Actualmente estoy buscando oportunidades para aplicar mis habilidades en iOS, ya sea en proyectos freelance, colaboraciones o posiciones full-time. ¡Sigue nuestras actualizaciones para más información!</p>
         </section>
 
         <section id="cities">
             <h2>Ciudades Destacadas</h2>
+            <video autoplay loop muted playsinline>
+                <source src="videos/video_demo.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+            <p class="video-caption">Explora una lista de ciudades destacadas, incluyendo CABA, con selecciones del editor: lugares únicos con mapas, fotos, descripciones e integración de Instagram.</p>
             <div class="city">
                 <h3>Buenos Aires</h3>
                 <img src="images/buenos-aires.jpg" alt="Buenos Aires">
@@ -74,6 +93,7 @@
             <div class="social-links">
                 <a href="https://github.com/danielcarc/pesobluemvvm" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/danielcarcacha/" target="_blank">LinkedIn</a>
+                <a href="CV/CV_Daniel_Carcacha_iOS_Developer.pdf" download class="cv-button">Descargar CV</a>
             </div>
         </section>
     </main>
@@ -85,6 +105,9 @@
     <script>
         function switchLanguage(lang) {
             alert(`Cambiando a idioma: ${lang}`); // Placeholder para cambio de idioma
+        }
+        window.onload = function() {
+            document.getElementById('preloader').style.display = 'none';
         }
     </script>
 </body>
