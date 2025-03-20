@@ -9,6 +9,7 @@
     <meta name="author" content="Daniel Carcacha">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Favicon/icono_pesoblu.png" type="image/png">
 </head>
 <body>
     <div id="preloader">
@@ -26,9 +27,9 @@
         <section id="about">
             <h2>Acerca de la App</h2>
             <p>PesoBluMVVM es una app desarrollada para iOS utilizando UIKit y el patrón MVVM. Ofrece conversión de monedas en tiempo real con Combine y recomendaciones turísticas de las ciudades más destacadas de Argentina.</p>
-            <video autoplay loop muted playsinline>
+            <video autoplay loop muted playsinline class="combine-video">
                 <source src="videos/video_Combine.mp4" type="video/mp4">
-                Tu navegador no soporta video.
+                Lo siento, tu navegador no puede reproducir este video.
             </video>
             <p class="video-caption">Demostración de la conversión de monedas en tiempo real usando Combine para una experiencia fluida y reactiva.</p>
             <a href="https://github.com/danielcarc/PesoBlueMVVM" target="_blank" class="github-button">Ver en GitHub</a>
@@ -39,12 +40,24 @@
             <ul>
                 <li>UIKit con vistas programáticas (ViewCode)</li>
                 <li>Patrón MVVM</li>
-                <li>Inyección de dependencias por Protocolos</li>
                 <li>Combine para manejo de datos reactivos</li>
                 <li>JSON Request</li>
                 <li>Patrón Delegate</li>
                 <li>Manejo de Github</li>
                 <li>Autenticación con Google Firebase, Google Analytics y Crashlytics</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Habilidades Destacadas</h2>
+            <ul>
+                <li>Desarrollo iOS con Swift y UIKit</li>
+                <li>Arquitectura MVVM y Combine</li>
+                <li>Inyección de dependencias con protocolos</li>
+                <li>Diseño de UI responsivo con ViewCode</li>
+                <li>Integración de APIs REST y JSON</li>
+                <li>Firebase (Autenticación, Analytics, Crashlytics)</li>
+                <li>Git y control de versiones</li>
             </ul>
         </section>
 
@@ -55,7 +68,7 @@
 
         <section id="cities">
             <h2>Ciudades Destacadas</h2>
-            <video autoplay loop muted playsinline>
+            <video autoplay loop muted playsinline class="cities-video">
                 <source src="videos/video_demo.mp4" type="video/mp4">
                 Tu navegador no soporta video.
             </video>
@@ -103,13 +116,18 @@
         <p>© 2025 Daniel Carcacha. Todos los derechos reservados.</p>
     </footer>
 
+    <button id="scrollTop" title="Volver arriba">↑</button>
+
     <script>
         function switchLanguage(lang) {
-            alert(`Cambiando a idioma: ${lang}`); // Placeholder para cambio de idioma
+            alert(`Cambiando a idioma: ${lang}`);
         }
         window.onload = function() {
             document.getElementById('preloader').style.display = 'none';
         }
+        document.getElementById('scrollTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
